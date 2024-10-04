@@ -111,10 +111,16 @@ const createRoutes = ({
   const customRoutes = customizationService.getGlobalCustomization('customRoutes');
   const allRoutes = [
     ...routes,
+    {
+      path: '/dicomviewer',
+      children: Local,  // This component will handle URL params
+      private: false,
+    },
     ...(showStudyList ? [WorkListRoute] : []),
     ...(customRoutes?.routes || []),
     ...bakedInRoutes,
     customRoutes?.notFoundRoute || notFoundRoute,
+
   ];
 
   function RouteWithErrorBoundary({ route, ...rest }) {
