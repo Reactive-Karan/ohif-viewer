@@ -43,6 +43,15 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GHCR_TOKEN }}
 
+      - name: Clean up Docker
+        run: |
+          docker system prune -f
+          docker volume prune -f
+          docker network prune -f
+
+      - name: Clean Yarn Cache
+        run: yarn cache clean
+
       - name: Build and push Docker image
         run: |
           docker build -t ghcr.io/imhotep-synapp/synapp-ohif-viewer:develop . --platform linux/amd64
