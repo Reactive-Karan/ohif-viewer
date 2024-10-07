@@ -54,6 +54,7 @@ jobs:
 
       - name: Build and push Docker image
         run: |
+          export DOCKER_BUILDKIT=1
           docker build -t ghcr.io/imhotep-synapp/synapp-ohif-viewer:develop . --platform linux/amd64
           docker push ghcr.io/imhotep-synapp/synapp-ohif-viewer:develop
 
