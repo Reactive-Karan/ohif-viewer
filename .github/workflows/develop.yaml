@@ -13,28 +13,28 @@ jobs:
     name: Build, Test, and Build Docker Image
     runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        node-version: [18.16.1]
+    # strategy:
+    #   matrix:
+    #     node-version: [18.16.1]
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
+      # - name: Checkout repository
+      #   uses: actions/checkout@v3
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: ${{ matrix.node-version }}
-          cache: yarn
+      # - name: Set up Node.js
+      #   uses: actions/setup-node@v3
+      #   with:
+      #     node-version: ${{ matrix.node-version }}
+      #     cache: yarn
 
-      - name: Install dependencies
-        run: yarn install --frozen-lockfile
+      # - name: Install dependencies
+      #   run: yarn install --frozen-lockfile
 
       # - name: Run tests
       #   run: yarn test --ci --watchAll=false
 
-      - name: Build the application
-        run: yarn build
+      # - name: Build the application
+      #   run: yarn build
 
       - name: Log in to GitHub Container Registry
         uses: docker/login-action@v2

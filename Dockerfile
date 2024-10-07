@@ -5,7 +5,7 @@ RUN apk add --no-cache build-base python3
 WORKDIR /usr/src/app
 
 # Copy necessary files
-COPY [package.json yarn.lock preinstall.js ./]
+COPY package.json yarn.lock preinstall.js ./
 COPY extensions/ ./extensions/
 COPY modes/ ./modes/
 COPY platform/ ./platform/
