@@ -32,7 +32,8 @@ const Local = () => {
     const fetchAndLoadDicomFile = async (fileUrl) => {
       setLoading(true);
       try {
-        const response = await fetch(fileUrl);
+        const encodedUrl = encodeURI(fileUrl);
+        const response = await fetch(encodedUrl, { mode: 'no-cors' });
         if (!response.ok) {
           throw new Error(`Error fetching file from ${fileUrl}`);
         }
