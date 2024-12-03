@@ -28,7 +28,7 @@ provided by the <a href="https://ohif.org/">Open Health Imaging Foundation (OHIF
 
 
 Custom Usage added (encodeURIComponent JS API to wrap your endpoint) :
-https://viewer.domain.eu/dicomviewer?dicomUrl=https%3A%2F%2Fs3.rbx.io.cloud.ovh.net%2Fsynappexpertise%2Ffiles%2Fcase-uploads%2F1730108159988%2Fbbmri-53323851%2520%25284%2529.dcm%3FX-Amz-Algorithm%3DAWS4-HMAC-SHA256%26X-Amz-Content-Sha256%3DUNSIGNED-PAYLOAD%26X-Amz-Credential%3Dc4c8b9c96ce644b29584f909cca575b2%252F20241028%252Frbx%252Fs3%252Faws4_request%26X-Amz-Date%3D20241028T102752Z%26X-Amz-Expires%3D604800%26X-Amz-Signature%3D6b143d09311425eeb6b70cafc2696904f0996170da6814fe6d9d3a0be141410a%26X-Amz-SignedHeaders%3Dhost%26x-id%3DGetObject
+https://viewer.domain.eu/dicomviewer?dicomUrl=yourUrl
 
  
 [![NPM version][npm-version-image]][npm-url]
